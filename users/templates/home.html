@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+<h1> Welcome {{ request.user.first_name }}</h1>
+
+
+{% if success_message %}
+  <div>{{ success_message }}</div>
+{% endif %}
+
+<a href="{% url  'logout' %}"> Log Out</a>
+
+
+{% endblock %}
